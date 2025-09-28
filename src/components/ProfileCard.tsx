@@ -1,5 +1,8 @@
 import React from "react";
 import type { Profile } from "../App";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
 
 type ProfileCardProps = {
   profile: Profile;
@@ -21,14 +24,17 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
 
           <div className="flex space-x-4 mt-4 text-center justify-center">
             <div>
-              <img src={profile.linkedin} className="h-4" />
+              <a href={profile.links[0]} className="h-4">
+                <FaGithub />
+              </a>
             </div>
             <div>
-              <img src={profile.github} className="h-4" />
+              <a href="{profile.links[1]}" className="h-4">
+                <FaLinkedin />
+              </a>
             </div>
             <div>
-              <img src={profile.gmail} className="h-4" />
-            </div>
+            <a href="{profile.links[2]}" className="h-4"><CiMail /></a>
           </div>
 
           <button className="mt-6 bg-blue-600 text-white px-4 py-2 rounded-4xl hover:bg-blue-700">
@@ -36,6 +42,7 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
