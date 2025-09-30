@@ -35,6 +35,8 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
             </div>
             <div>
             <a href="{profile.links[2]}" className="h-4"><CiMail /></a>
+
+            </div>
           </div>
 
           <button className="mt-6 bg-blue-600 text-white px-4 py-2 rounded-4xl hover:bg-blue-700">
@@ -42,7 +44,6 @@ const ProfileCard = ({ profile }: ProfileCardProps) => {
           </button>
         </div>
       </div>
-    </div>
     </div>
   );
 };

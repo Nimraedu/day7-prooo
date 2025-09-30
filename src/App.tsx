@@ -48,14 +48,11 @@ export type FlagType = {
   horizontal: boolean;
 };
 export type Profile = {
+  id: number;
   name: string;
   role: string;
   image: string;
-  links: [
-      "https://share.google/yfSuvaB8qfJca864D",
-      "https://www.linkedin.com/in/nimra-miraj-39218737a",
-      "abc@gmail.com",
-    ],
+  links: [string, string, string]
 };
 const App = () => {
   const user1: User = {
@@ -102,6 +99,7 @@ const App = () => {
   };
 
   const profile1: Profile = {
+    id: 1,
     name: "Frontend Developer",
     role: "Tech Job-Seeker",
     image:
@@ -114,6 +112,7 @@ const App = () => {
   };
 
   const profile2: Profile = {
+    id: 2,
     name: "UI Designer",
     role: "Tech Job-Seeker",
     image:
@@ -126,6 +125,7 @@ const App = () => {
   };
 
   const profile3: Profile = {
+    id: 3,
     name: "Software Engineer",
     role: "Tech Job-Seeker",
     image:
@@ -138,6 +138,7 @@ const App = () => {
   };
 
   const profile4: Profile = {
+    id: 4,
     name: "Software Engineer",
     role: "Tech Job-Seeker",
     image:
@@ -150,6 +151,7 @@ const App = () => {
   };
 
   const profile5: Profile = {
+    id: 5,
     name: "Software Engineer",
     role: "Tech Job-Seeker",
     image:
@@ -172,7 +174,7 @@ const App = () => {
         <Flag flag={flag2} />
         <Flag flag={flag3} />
       </div>
-      <div className="min-h-screen flex items-center justify-center gap-6 p-6 m-22 ">
+     <div className="min-h-screen flex items-center justify-center gap-6 p-6 m-22 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl">
           <ProfileCard profile={profile1} />
           <ProfileCard profile={profile2} />
